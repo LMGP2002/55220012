@@ -1,17 +1,7 @@
-function soloNumeros(e){
+function sinEspacios(e){
     key=e.keycode || e.which;
     teclado=String.fromCharCode(key);
-    numeros="0123456789";
-    especiales=[8,37,38,44,46];//array
-    tecladoEspecial=false;
-    for(item of especiales){
-        if(key==item){
-            if(teclado!='%'&&teclado!='&'){
-                tecladoEspecial=true;
-            }
-        }
-    }
-    if(numeros.indexOf(teclado)==-1 &&!tecladoEspecial){
+    if(teclado==' '){
         return false;
     } 
 }
