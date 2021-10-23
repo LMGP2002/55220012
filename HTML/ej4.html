@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="../CSS/ej4.css">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <h2 class="nav_logo">Ejercicio número 4</h2>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html" class="nav_link">Inicio</a></li>
+                <li class="nav_item"><a href="ej1.html" class="nav_link">Ejercicio 1</a></li>
+                <li class="nav_item"><a href="ej3.html" class="nav_link">Ejercicio 3</a></li>
+                <li class="nav_item"><a href="ej4.html" class="nav_link">Ejercicio 4</a></li>
+                <li class="nav_item"><a href="ej6.html" class="nav_link">Ejercicio 6</a></li>
+                <li class="nav_item"><a href="ej7.html" class="nav_link">Ejercicio 7</a></li>
+                <li class="nav_item"><a href="ej8.html" class="nav_link">Ejercicio 8</a></li>
+            </ul>
+            <figure class="nav_menu">
+                <img src="../IMG/menu.svg" alt="menu" class="nav_icon">
+            </figure>
+        </nav>
+        <section class="hero_main container">
+            <div class="hero_texts">
+                <h1 class="hero_title">Promedio de notas</h1>
+                <p class="hero_subtitle">Ingrese su nombre, materia y 3  notas académicas (entre 0 y 5) para verificar su promedio.</p>
+            </div>
+            <form>
+                <div class="flex">
+                    <h2>Ingrese sus datos</h2>
+                    <div>
+                        <label>Nombre:</label>
+                        <input type="text" id="nombre" maxlength="15" onkeyup="habilitar()" placeholder="Escribe aquí">
+                    </div>
+                    <div>
+                        <label>Materia:</label>
+                        <input type="text" id="materia" maxlength="21" onkeyup="habilitar()" placeholder="Escribe aquí">
+                    </div>
+                </div>
+                <div class="notas">
+                    <div class="flex-notas">
+                        <div>
+                            <label>Nota 1:</label>
+                            <input class="input-notas" id="nota1" type="text" onkeypress="return soloNumeros(event,'nota1')" maxlength="4" onpaste="return false">
+                        </div>
+                        <div>
+                            <label>Nota 2:</label>
+                            <input class="input-notas" id="nota2" type="text" onkeypress="return soloNumeros(event,'nota2')" maxlength="4" onpaste="return false">
+                        </div>
+                        <div>
+                            <label>Nota 3:</label>
+                            <input class="input-notas" id="nota3" type="text" onkeypress="return soloNumeros(event,'nota3')" maxlength="4" onpaste="return false">
+                        </div>
+                    </div>
+                    <div class="flex-notas">
+                        <button class="botones" onclick="calcularPromedio()" type="button" id="boton" disabled>Calcular </button>
+                        <button class="botones" type="button" onclick="limpiar()">Limpiar</button>
+                    </div>
+                </div>
+                <div class="cont-respuesta">
+                    <label>Promedio:</label>
+                    <div class="textarea" id="respuesta">Por favor, rellene todos los campos para continuar.</div>
+                </div>
+            </form>
+        </section>
+
+        <div style="height: 150px; overflow: hidden;" class="hero_waves"><svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C268.34,275.81 343.40,-128.78 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <script src="../JS/ej4.js"></script>
+</body>
+
+</html>

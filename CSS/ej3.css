@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero{
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: #fff;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 100vh;
+}
+.nav{
+    grid-area: nav;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap:1em;
+    align-items: center;
+    height: 90px;
+}
+.nav_link{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem
+}
+.nav_link:hover{
+    color:#EB00E4;
+    transform: scale(1.1);}
+.nav_list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap:3em;
+}
+.nav_logo{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.nav_menu{
+    display: none;
+}
+.nav_icon{
+    width: 30px;
+}
+.hero_main{
+    grid-area: content;
+    display: grid;
+    gap:2em;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-bottom: 110px;
+}
+.hero_waves{
+    grid-area: content;
+    align-self: flex-end;
+}
+.hero_img{
+    width: 95%;
+}
+.hero_title{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+.hero_subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.cont_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.element{
+    display: block;
+    margin-bottom: 25px;
+}
+.botones{
+    background-color: #00B2EB;
+    color: #fff;
+    font-size: 1.1em;
+    padding: .3em .7em;
+    border: none;
+    border-radius: .8em;
+}
+.botones:hover{
+    cursor: pointer;
+}
+textarea{
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: 400 italic;
+    outline: none;
+    border: none;
+    color: #333636;
+}
+.cont-respuesta{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+    gap: 10px;
+}
+.cont-botones{
+    display: grid;
+    grid-template-columns:repeat(2,max-content);
+    gap: 15px;
+}
+input{
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: #333636;
+}
+form{
+    padding: 10px;
+    border:solid 1px;
+}
+
+

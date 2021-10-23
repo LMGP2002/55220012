@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero{
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: #fff;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 100vh;
+}
+.nav{
+    grid-area: nav;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap:1em;
+    align-items: center;
+    height: 90px;
+}
+.nav_link{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem
+}
+.nav_link:hover{
+    color:#EB00E4;
+    transform: scale(1.1);}
+.nav_list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap:3em;
+}
+.nav_logo{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.nav_menu{
+    display: none;
+}
+.nav_icon{
+    width: 30px;
+}
+.hero_main{
+    grid-area: content;
+    display: grid;
+    gap:2em;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-bottom: 110px;
+}
+.hero_waves{
+    grid-area: content;
+    align-self: flex-end;
+}
+.hero_img{
+    width: 95%;
+}
+.hero_title{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+.hero_subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+form{
+    border:solid 1px;
+    padding: 10px;
+    width:max-content;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 60%;
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;
+}
+.textarea{
+    resize: none;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333636;
+    margin-top: 20px;
+}
+.div-res{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(11,1fr);
+    grid-template-columns: repeat(2,1fr);
+    height: 245px;
+    width: 320px;
+    margin-right:20px;
+    font-size: 17px;
+}
+.botones{
+    background-color: #00B2EB;
+    color: #fff;
+    font-size: 15px;
+    padding: 6px;
+    border: none;
+    border-radius: .8em;
+    margin-right: 20px;
+}
+.botones:hover{
+    cursor: pointer;
+}
+input{
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #333636;
+}
+#cont-buscar{
+    grid-column: span 2;
+}
+#cont-botones{
+    grid-column: span 2;
+}
+.numeros{
+    height: 50px;
+    width: 200px;
+}
+h2{
+    font-size: 20px;
+}
